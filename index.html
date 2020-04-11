@@ -10,24 +10,6 @@
   <link rel="stylesheet" href="main.css">
   <script>
 
-    function callCat() {
-      var url = 'https://cataas.com/cat';
-      var options = {
-        method: 'GET',
-        mode: 'cors'
-      };
-      var request = new Request(url);
-      fetch(request, options).then((response) => {
-        response.arrayBuffer().then((buffer) => {
-          var base64Flag = 'data:image/jpeg;base64,';
-          var imageStr = arrayBufferToBase64(buffer);
-
-          document.querySelector('img').src = base64Flag + imageStr;
-          console.log("Done");
-        });
-      });
-    }
-
     function arrayBufferToBase64(buffer) {
       var binary = '';
       var bytes = [].slice.call(new Uint8Array(buffer));
@@ -51,5 +33,23 @@
   <script>
      //- Using a function pointer:
    document.getElementById("catMe").onclick = callCat();
+    
+    function callCat() {
+      var url = 'https://cataas.com/cat';
+      var options = {
+        method: 'GET',
+        mode: 'cors'
+      };
+      var request = new Request(url);
+      fetch(request, options).then((response) => {
+        response.arrayBuffer().then((buffer) => {
+          var base64Flag = 'data:image/jpeg;base64,';
+          var imageStr = arrayBufferToBase64(buffer);
+
+          document.querySelector('img').src = base64Flag + imageStr;
+          console.log("Done");
+        });
+      });
+    }
   </script>
 </html>
