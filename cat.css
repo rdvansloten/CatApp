@@ -1,0 +1,35 @@
+html {
+ padding: 0;
+ margin:  0;
+ border:  0;
+}
+
+body {
+  width:            100%;
+  height:           100%;
+  background-color: #fff0fe;
+}
+
+h1 {
+  width:            100vw;
+  height:           3em;
+  color:            #0095ff;
+  background-color: #fac8f7;
+}
+
+#catPic {
+  width: 100%;
+  max-width: 1024px;
+}
+
+#giveCat {
+  width:            90%;
+  margin:           5% auto;
+  color:            #0095ff;
+  background-color: #fac8f7;
+}
+
+#catSays {
+  width:            90%;
+  margin:           5% auto;
+}
