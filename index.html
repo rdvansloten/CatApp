@@ -7,50 +7,25 @@
   <title>Meow.</title>
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
-  <link rel="stylesheet" href="main.css">
-  <script>
-    function callCat() {
-      var url = 'https://cataas.com/cat';
-      var options = {
-        method: 'GET',
-        mode: 'cors'
-      };
-      var request = new Request(url);
-      fetch(request, options).then((response) => {
-        response.arrayBuffer().then((buffer) => {
-          var base64Flag = 'data:image/jpeg;base64,';
-          var imageStr = arrayBufferToBase64(buffer);
-        });
-        
-      });
-     document.querySelector('img').src = base64Flag + imageStr;
-     console.log("Done");
-    }
-    
-    function arrayBufferToBase64(buffer) {
-      var binary = '';
-      var bytes = [].slice.call(new Uint8Array(buffer));
-
-      bytes.forEach((b) => binary += String.fromCharCode(b));
-
-      return window.btoa(binary);
-    };
-  </script>
 
 </head>
 
 <body>
 
 <h1>Cats</h1>
+<input id="catSays" type="text" placeholder="Cat says" />
+<button id="giveCat" onclick="giveCat();">Give New Cat</button>
 
-<button id="catMe">Give Cat</button>
 <br />
-<img src="" />
+<img id="catPic" src="" />
+  
 </body>
-  <script>
-     //- Using a function pointer:
-   document.getElementById("catMe").onclick = callCat();
-    
-    
-  </script>
+  
+<script>
+function giveCat() {
+  var catSays = document.getElementById("catSays").value;
+  document.getElementById("catPic").src="https://cataas.com/cat/gif/says/"+catSays;
+}
+</script>
+  
 </html>
