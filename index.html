@@ -7,26 +7,23 @@
 </head>
 
 <body>
-
-<h1>Cats</h1>
-<input id="catSays" type="text" placeholder="Cat says" />
-<button id="giveCat" onclick="giveCat();">Give New Cat</button>
-
-<br />
-<img id="catPic" src="" />
-  
+  <h1>Cats</h1>
+  <input id="catSays" type="text" placeholder="Cat says" />
+  <button id="giveCat" onclick="giveCat();">Give New Cat</button>
+  <br />
+  <img id="catPic" src="" />
 </body>
   
 <script>
-function giveCat() {
-  var catSays = document.getElementById("catSays").value;
-  if ( catSays ) {
-    document.getElementById("catPic").src="https://cataas.com/cat/gif/says/"+catSays;
+  function giveCat() {
+    var catSays = document.getElementById("catSays").value;
+    if ( catSays ) {
+      document.getElementById("catPic").src="https://cataas.com/cat/gif/says/"+catSays;
+    }
+    else {
+      document.getElementById("catPic").src="https://cataas.com/cat/gif/says/hello";
+    }
   }
-  else {
-    document.getElementById("catPic").src="https://cataas.com/cat/gif/says/hello";
-  }
-}
 </script>
   
 </html>
