@@ -23,6 +23,7 @@
           var imageStr = arrayBufferToBase64(buffer);
 
           document.querySelector('img').src = base64Flag + imageStr;
+          console.log("Done");
         });
       });
     }
@@ -43,7 +44,7 @@
 
 <h1>Cats</h1>
 
-<button id="catMe">Give Cat</button>
+<button id="catMe" onclick="callCat();">Give Cat</button>
 
 <img src="" />
 </body>
