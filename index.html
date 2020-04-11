@@ -3,11 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
   <title>Meow.</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
-
 </head>
 
 <body>
@@ -24,6 +20,9 @@
 <script>
 function giveCat() {
   var catSays = document.getElementById("catSays").value;
+  if (catSays = "") {
+    var catSays = "Hello"; 
+  }
   document.getElementById("catPic").src="https://cataas.com/cat/gif/says/"+catSays;
 }
 </script>
