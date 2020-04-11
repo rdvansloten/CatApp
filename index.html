@@ -21,9 +21,11 @@
 function giveCat() {
   var catSays = document.getElementById("catSays").value;
   if (catSays = "") {
-    var catSays = "Hello"; 
+    document.getElementById("catPic").src="https://cataas.com/cat/gif/says/hello";
   }
-  document.getElementById("catPic").src="https://cataas.com/cat/gif/says/"+catSays;
+  else {
+    document.getElementById("catPic").src="https://cataas.com/cat/gif/says/"+catSays;
+  }
 }
 </script>
   
