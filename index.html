@@ -20,11 +20,11 @@
 <script>
 function giveCat() {
   var catSays = document.getElementById("catSays").value;
-  if (catSays = "") {
-    document.getElementById("catPic").src="https://cataas.com/cat/gif/says/hello";
+  if ( catSays ) {
+    document.getElementById("catPic").src="https://cataas.com/cat/gif/says/"+catSays;
   }
   else {
-    document.getElementById("catPic").src="https://cataas.com/cat/gif/says/"+catSays;
+    document.getElementById("catPic").src="https://cataas.com/cat/gif/says/hello";
   }
 }
 </script>
